@@ -1,5 +1,6 @@
 using System;
 using System.Runtime.InteropServices;
+// a comment
 
 namespace ch13_automating_clamav_filesystem
 {
