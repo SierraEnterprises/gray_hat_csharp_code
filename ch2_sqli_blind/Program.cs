@@ -107,5 +107,14 @@ namespace ch2_sqli_blind
 
 			return response;
 		}
+		private static string MakeRequestV2(string host, string payload) {
+			HttpWebRequest request = (HttpWebRequest)WebRequest.Create ("http://"+host+"/cgi-bin/badstore.cgi?action=search&searchquery="+Uri.EscapeUriString(payload));
+
+			string response = string.Empty;
+			using (StreamReader reader = new StreamReader (request.GetResponse ().GetResponseStream ()))
+				response = reader.ReadToEnd ();
+
+			return response;
+		}
 	}
 }
