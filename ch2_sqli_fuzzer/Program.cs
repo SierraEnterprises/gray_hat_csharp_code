@@ -46,6 +46,9 @@ namespace ch2_sqli_fuzzer
 				// Add another SQL Injection
 				if (response.Contains("another error in your SQL syntax")) 
 					Console.WriteLine("Another SQL I: Parameter " + parm + " seems vulnerable to SQL injection with value: " + val + "'"); 
+				// Add yet another SQL Injection
+				if (response.Contains("yet another error in your SQL syntax")) 
+					Console.WriteLine("Yet another SQL I: Parameter " + parm + " seems vulnerable to SQL injection with value: " + val + "'"); 
 		
 				sock.Close();
 			}
