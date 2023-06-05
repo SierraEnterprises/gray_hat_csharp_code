@@ -85,7 +85,8 @@ jobs:
     # SAST
     
     # security-scan
-    dotnet tool install --global security-scan --version 5.6.7
+    - name: security-scan
+      run: dotnet tool install --global security-scan --version 5.6.7
 
 
     # Restore the application to populate the obj folder with RuntimeIdentifiers
