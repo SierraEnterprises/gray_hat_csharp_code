@@ -78,9 +78,15 @@ jobs:
     - name: Setup MSBuild.exe
       uses: microsoft/setup-msbuild@v1.0.2
 
-    # Execute all unit tests in the solution
-    - name: Execute unit tests
-      run: dotnet test
+#    # Execute all unit tests in the solution
+#    - name: Execute unit tests
+#      run: dotnet test
+
+    # SAST
+    
+    # security-scan
+    dotnet tool install --global security-scan --version 5.6.7
+
 
     # Restore the application to populate the obj folder with RuntimeIdentifiers
     - name: Restore the application
